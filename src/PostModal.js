@@ -3,6 +3,7 @@ import { Avatar, Icon, IconButton, SvgIcon, TextField } from '@mui/material';
 import "./PostModal.css";
 import CloseIcon from '@mui/icons-material/Close';
 import PublicIcon from '@mui/icons-material/Public';
+import ModalOption from "./ModalOption.js"
 
 function PostModal() {
 
@@ -52,7 +53,28 @@ function PostModal() {
             </div>
 
             <div className="modal__downPart">
-                down
+                <div className="modal__downPart__options"></div>
+                <div className="modal__downPart__commAndPost">
+                    <div className="modal_downPart__commAndPost__comments">
+                        <ModalOption>
+
+                        </ModalOption>
+                        <ModalOption>
+
+                        </ModalOption>
+                        <ModalOption>
+
+                        </ModalOption>
+                        <ModalOption>
+
+                        </ModalOption>
+                    </div>
+                    <div className="modal_downPart__commAndPost__post">
+                        <button>
+                            Post
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div >
