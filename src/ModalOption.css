@@ -1,0 +1,17 @@
+.modalOption{
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    color: gray;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modalOption:hover{
+    background-color:whitesmoke;
+    border-radius: 10px;
+}
+
+.modalOption > h4{
+    margin-left: 5px;
+}

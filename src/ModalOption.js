@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './ModalOption.css';
 
-function ModalOption() {
+function ModalOption({ Icon, title, color }) {
     return (
-        <div className="headerOption">
-            {Icon && <Icon className="headerOption__icon" />}
-            {avatar && <Avatar className='headerOption__icon' src={avatar} alt="nimic" />}
-            <div className="headerOption__title">{title}</div>
+        <div className="modalOption">
+            <Icon style={{ color: color }} />
+            <h4>{title}</h4>
         </div>
     )
 }

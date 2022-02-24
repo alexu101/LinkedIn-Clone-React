@@ -113,22 +113,69 @@ background-color:rgb(238, 238, 238);
 
 .modal__middlePart__hashtag >textarea{
     width: 100%;
-    
     outline: none;
     border: none;
     resize:none;
-    height: 18px;
-    overflow: auto;
+    overflow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     font-size: 18px;
     color:#0a66c2;
     font-weight:bold;
-
+        
  }
 
 .modal__downPart{
     padding:10px;
     display:flex;
+    justify-content: space-between;
+}
 
+.modal__downPart__options{
+    padding:10px;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.modal_downPart__commAndPost__comments{
+    display: flex;
+    justify-content: space-evenly;
+    padding:10px;
+}
+
+.privacy{
+    display: flex;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(245, 241, 241);
+    font-size: 12px;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.privacy:hover{
+    cursor: pointer;
+    background-color: rgb(238, 241, 255);
+}
+
+.privacy > p{
+    padding-left: 5px;
+    padding-top: 5px;
+    font-weight: 400;
+}
+
+.modal__downPart > button{
+    height: auto;
+    width: 70px;
+    border: 0;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.modal__downPart > button:hover{
+    border: 0;
+    border-radius: 30px;
+    color: rgb(9, 9, 141);
+    font-weight: bold;
+    cursor: pointer;
 }

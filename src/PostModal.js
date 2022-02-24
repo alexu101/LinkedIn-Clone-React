@@ -1,9 +1,14 @@
 import React, { Fragment } from 'react'
 import { Avatar, Icon, IconButton, SvgIcon, TextField } from '@mui/material';
 import "./PostModal.css";
+import ModalOption from "./ModalOption.js";
+import ImageIcon from '@mui/icons-material/Image';
+import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
+import EventNoteIcon from '@mui/icons-material/EventNote';
+import { CalendarViewDay } from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
 import PublicIcon from '@mui/icons-material/Public';
-import ModalOption from "./ModalOption.js"
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 function PostModal() {
 
@@ -53,28 +58,27 @@ function PostModal() {
             </div>
 
             <div className="modal__downPart">
-                <div className="modal__downPart__options"></div>
+                <div className="modal__downPart__options">
+                    <ModalOption Icon={ImageIcon} title={'Photo'} color="#7085F9" />
+                    <ModalOption Icon={SubscriptionsIcon} title={'Video'} color="#E7A33E" />
+                    <ModalOption Icon={EventNoteIcon} title={'Event'} color="#C0CBCD" />
+                    <ModalOption Icon={CalendarViewDay} title={'Write article'} color="#7FC15E" />
+                </div>
                 <div className="modal__downPart__commAndPost">
                     <div className="modal_downPart__commAndPost__comments">
-                        <ModalOption>
-
-                        </ModalOption>
-                        <ModalOption>
-
-                        </ModalOption>
-                        <ModalOption>
-
-                        </ModalOption>
-                        <ModalOption>
-
-                        </ModalOption>
-                    </div>
-                    <div className="modal_downPart__commAndPost__post">
-                        <button>
-                            Post
-                        </button>
+                        <div className="privacy">
+                            <PublicIcon />
+                            <p>Public</p>
+                        </div>
+                        <div className="privacy">
+                            <ConnectWithoutContactIcon />
+                            <p>Only Connection</p>
+                        </div>
                     </div>
                 </div>
+                <button>
+                    Post
+                </button>
             </div>
 
         </div >
