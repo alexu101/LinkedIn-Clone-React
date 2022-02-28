@@ -29,7 +29,7 @@ function Login() {
                     displayName: fullName,
                     photoUrl: profilePic,
                 }))
-            }).catch(error => alert(error.message))
+            }).catch(error => alert(error))
         })
 
     };
