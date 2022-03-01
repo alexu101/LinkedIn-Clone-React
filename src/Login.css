@@ -37,6 +37,7 @@ font-size: 15px;
     background-color:#0074b1;
     font-size: large;
     color: #ffff;
+    cursor: pointer;
 }
 
 .login__register{
