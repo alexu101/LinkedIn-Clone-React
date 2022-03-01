@@ -9,7 +9,9 @@ import WorkIcon from '@mui/icons-material/Work';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
+
 function Header() {
+
     return (
         <div className="header">
             <div className="header__left">
@@ -28,7 +30,7 @@ function Header() {
                 <HeaderOption Icon={WorkIcon} title="Jobs" />
                 <HeaderOption Icon={ChatIcon} title="Messaging" />
                 <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-                <HeaderOption avatar="https://t3.ftcdn.net/jpg/02/94/62/14/360_F_294621430_9dwIpCeY1LqefWCcU23pP9i11BgzOS0N.jpg" title="Me" />
+                <HeaderOption avatar={true} title="Me" />
             </div>
         </div>
     )

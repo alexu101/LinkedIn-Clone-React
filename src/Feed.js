@@ -13,8 +13,13 @@ import { db } from "./firebase.js"
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import { selectUser } from "./features/userSlice"
+import { useSelector } from "react-redux"
 
 function Feed() {
+
+    const user = useSelector(selectUser);
+
     const [posts, setPosts] = useState([]);
     const [input, setInput] = useState('');
 
@@ -35,9 +40,10 @@ function Feed() {
         e.preventDefault();
 
         db.collection('posts').add({
-            name: 'Alex Tanase',
-            description: 'this is a test',
+            name: user.displayName,
+            description: user.email,
             message: input,
+            photoUrl: user.photoUrl || "",
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         });
 
