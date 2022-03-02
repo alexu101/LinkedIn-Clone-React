@@ -1,8 +1,9 @@
 .sidebar{
     position: sticky;
+    height: fit-content;
     top:80px;
     flex:0.2;
-    margin:20px;
+    margin-top:20px;
     display: flex;
     flex-direction: column;
     text-align: center;

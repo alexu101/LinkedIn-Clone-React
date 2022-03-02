@@ -7,11 +7,13 @@ import { useDispatch, useSelector } from "react-redux"
 import Login from "./Login.js"
 import { auth } from './firebase';
 import { useEffect } from 'react';
+import Widgets from './Widgets';
+
 
 function App() {
   const user = useSelector(selectUser);
 
-  /*const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     auth.onAuthStateChanged(userAuth => {
@@ -28,7 +30,7 @@ function App() {
         dispatch(logout());
       }
     });
-  })*/
+  }, [])
 
   return (
     <div className="App">
@@ -38,7 +40,7 @@ function App() {
           < div className="app__body">
             <Sidebar />
             <Feed />
-            {/* Widgets */}
+            <Widgets />
           </div>
         )}
     </div >

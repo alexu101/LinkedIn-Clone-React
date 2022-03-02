@@ -8,9 +8,15 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import WorkIcon from '@mui/icons-material/Work';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-
+import { logout, selectUser } from "./features/userSlice"
+import { useSelector } from "react-redux"
+import { useDispatch } from 'react-redux';
+import { auth } from './firebase';
 
 function Header() {
+
+    const user = useSelector(selectUser);
+    const dispatch = useDispatch();
 
     return (
         <div className="header">
@@ -30,7 +36,10 @@ function Header() {
                 <HeaderOption Icon={WorkIcon} title="Jobs" />
                 <HeaderOption Icon={ChatIcon} title="Messaging" />
                 <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-                <HeaderOption avatar={true} title="Me" />
+                <HeaderOption avatar={true} title="Me" onClick={() => {
+                    dispatch(logout());
+                    auth.signOut();
+                }} />
             </div>
         </div>
     )

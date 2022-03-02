@@ -3,10 +3,11 @@ import { Avatar } from '@mui/material';
 import React from 'react'
 import "./Posts.css";
 import FeedOption from "./FeedOption.js"
+import { forwardRef } from 'react';
 
-function Posts({ name, description, message, photoUrl }) {
+const Posts = forwardRef(({ name, description, message, photoUrl }, ref) => {
     return (
-        <div className="post">
+        <div ref={ref} className="post">
             <div className="post__header">
                 <Avatar src={photoUrl}>{name[0]}</Avatar>
                 <div className="post__info">
@@ -26,6 +27,6 @@ function Posts({ name, description, message, photoUrl }) {
             </div>
         </div>
     )
-}
+})
 
 export default Posts

@@ -15,6 +15,7 @@ function Login() {
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
 
+
     const register = () => {
         if (!fullName)
             return alert('Please enter a full name!');
